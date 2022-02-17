@@ -20,22 +20,20 @@ class Conversation:
 
     def command(self, line, game, cmd):
         if cmd == "commands" or cmd == "help":
-            self.send_reply(line, "Supported commands: !wait, !name, !howto, !eval, !queue,!owner,!commands")
+            self.send_reply(line, "Supported commands: !wait, !name, !howto, !eval, !queue,!commands")
         elif cmd == "wait" and game.is_abortable():
             game.ping(60, 120)
             self.send_reply(line, "Waiting 60 seconds...")
         elif cmd == "name":
             name = game.me.name
             self.send_reply(line, "{} running {} (lichess-bot v{}) ".format(name, self.engine.name(), self.version))
-        elif cmd == "owner":
-            self.send_reply(line, "@EshanHasaranga200703")
         elif cmd == "howto":
             self.send_reply(line, "How to run your own bot: Check out @EshanHasaranga200703 's blog about making lichess bots")
         elif cmd == "eval":
             stats = self.engine.get_stats()
             self.send_reply(line, ", ".join(stats))
         elif cmd == "eval":
-            self.send_reply(line, "Sorry<if i tell it to you,You can use it for cheat! ")
+            self.send_reply(line, "Sorry,if i tell it to you,You may use it for cheat! ")
         elif cmd == "queue":
             if self.challengers:
                 challengers = ", ".join(["@" + challenger.challenger_name for challenger in reversed(self.challengers)])
