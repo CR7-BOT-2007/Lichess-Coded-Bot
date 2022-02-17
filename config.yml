@@ -1,4 +1,4 @@
-token: "lip_21OZ9Xx31ra8tFxK9qVk"    # Lichess OAuth2 Token.
+token: "lip_sm0ZIEggPY59ctsh1hcG"    # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
@@ -87,14 +87,14 @@ challenge:                   # incoming challenges
   variants:                  # chess variants to accept (http://lichess.org/variant)
     - standard
 #   - fromPosition
-#    - antichess
-#    - atomic
-#    - chess960
-#    - crazyhouse
-#    - horde
-#    - kingOfTheHill
-#    - racingKings
-#    - threeCheck
+    - antichess
+    - atomic
+    - chess960
+    - crazyhouse
+    - horde
+    - kingOfTheHill
+    - racingKings
+    - threeCheck
   time_controls:             # time controls to accept
     - bullet
     - blitz
@@ -103,7 +103,7 @@ challenge:                   # incoming challenges
     - correspondence
   modes:                     # game modes to accept
     - casual                 # unrated games
-#    - rated                  # rated games - must comment if the engine doesn't try to win
+    - rated                  # rated games - must comment if the engine doesn't try to win
   
   greeting:
     # Optional substitution keywords (include curly braces):
